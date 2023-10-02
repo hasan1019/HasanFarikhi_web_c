@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&family=Roboto:wght@300;400&display=swap');
+
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    /* background : #040D12 ; */
+    color: #ededee;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding : 20px 10%;
+    background-color : #183D3D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #ededee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 14px;
+    color: #ededee;
+    text-decoration: none;
+    font-weight: 500; 
+    margin-left: 25px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color:aquamarine;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+.home::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.home::after {
+    content: "";
+    background-image: url(asset/1.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; 
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ededee;
+}
+
+.home-content h3{
+    font-size: 34px;
+    font-weight: 700;
+    color: aquamarine;
+}
+
+.home-content p{
+    font-size: 16px;
+    margin: 20px 0px 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 353px;
+    height: 50px; 
+    padding-top: 10px;
+}
+
+.btn-box a{
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #040D12;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:hover{
+    color: #ededee;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background: #040D12;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.card{
+    width: 300px; /* Lebar kartu */
+    height: 300px; /* Tinggi kartu */
+    position: absolute;
+    top: 30%;
+    right: 150px; /* Mengatur posisi ke sisi kanan */
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    padding: 10px; 
+}
+
+.photo-profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    width: 200px; /* Lebar gambar profil */
+    height: 200px; /* Tinggi gambar profil */
+    overflow: hidden;
+    border-radius: 750%;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.caption {
+    text-align: center;
+    color: #ededee;
+    margin-top: 20px; /* Jarak antara teks dengan gambar */
+}
+
+.caption p {
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.caption .top-text{
+    font-weight: 700;
+}
+
+.caption .bottom-text{
+    color: aquamarine;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+footer {
+    background-color: #183D3D; /* Warna latar belakang footer */
+    color: #ededee; /* Warna teks dalam footer */
+    text-align: center; /* Teks rata tengah */
+    padding: 20px; /* Padding di dalam footer */
+}
+
+.social-icon a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ededee;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s; /* Efek transisi saat hover */
+}
+
+.social-icon a:hover {
+    color: #00A0D2; /* Warna saat hover */
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list ul li {
+    margin: 5px 0;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Efek transisi saat hover */
+}
+
+.list ul li a:hover {
+    color: #00A0D2; /* Warna saat hover */
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.designer {
+    font-weight: bold;
+}
+
